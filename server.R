@@ -7,24 +7,24 @@ library(tidyverse)
 library(shinydashboard)
 
 varChoices = list(
-  `Rounds Played` = "Rounds",
+  "Rounds Played" = "Rounds",
   "Wins" = "Wins",
-  `Number of Top 10 Finishes` = "Top.10",
-  `Winnings (millions of $)` = "Money",
-  `Final Official World Golf Ranking` = "Final.OWGR",
-  `Average Official World Golf Ranking` = "Average.OWGR",
-  `FedEx Cup Points` = "Points",
-  `Average Driving Distance (yards)` = "Average.Driving.Distance",
-  `Percentage of Fairways Hit` = "Fairway.Percentage",
-  `Percentage of Greens in Regulation Hit` = "GIR",
-  `Average Number of Putts` = "Average.Putts",
-  `Average Scrambling Percentage` = "Average.Scrambling",
-  `Average Score` = "Average.Score",
-  `Average Strokes Gained: Total` = "Average.SG.Total",
-  `Average Strokes Gained: Off the Tee` = "SG.OTT",
-  `Average Strokes Gained: Approach` = "SG.APR",
-  `Average Strokes Gained: Around the Green` = "SG.ARG",
-  `Average Strokes Gained: Putting` = "Average.SG.Putts"
+  "Number of Top 10 Finishes" = "Top.10",
+  "Winnings (millions of $)" = "Money",
+  "Final Official World Golf Ranking" = "Final.OWGR",
+  "Average Official World Golf Ranking" = "Average.OWGR",
+  "FedEx Cup Points" = "Points",
+  "Average Driving Distance (yards)" = "Average.Driving.Distance",
+  "Percentage of Fairways Hit" = "Fairway.Percentage",
+  "Percentage of Greens in Regulation Hit" = "GIR",
+  "Average Number of Putts" = "Average.Putts",
+  "Average Scrambling Percentage" = "Average.Scrambling",
+  "Average Score" = "Average.Score",
+  "Average Strokes Gained: Total" = "Average.SG.Total",
+  "Average Strokes Gained: Off the Tee" = "SG.OTT",
+  "Average Strokes Gained: Approach" = "SG.APR",
+  "Average Strokes Gained: Around the Green" = "SG.ARG",
+  "Average Strokes Gained: Putting" = "Average.SG.Putts"
 )
 
 golf <- read_csv("data/finalData.csv")

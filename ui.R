@@ -6,24 +6,24 @@ library(tidyverse)
 library(shinydashboard)
 
 varChoices = list(
-  `Rounds Played` = "Rounds",
+  "Rounds Played" = "Rounds",
   "Wins" = "Wins",
-  `Number of Top 10 Finishes` = "Top.10",
-  `Winnings (millions of $)` = "Money",
-  `Final Official World Golf Ranking` = "Final.OWGR",
-  `Average Official World Golf Ranking` = "Average.OWGR",
-  `FedEx Cup Points` = "Points",
-  `Average Driving Distance (yards)` = "Average.Driving.Distance",
-  `Percentage of Fairways Hit` = "Fairway.Percentage",
-  `Percentage of Greens in Regulation Hit` = "GIR",
-  `Average Number of Putts` = "Average.Putts",
-  `Average Scrambling Percentage` = "Average.Scrambling",
-  `Average Score` = "Average.Score",
-  `Average Strokes Gained: Total` = "Average.SG.Total",
-  `Average Strokes Gained: Off the Tee` = "SG.OTT",
-  `Average Strokes Gained: Approach` = "SG.APR",
-  `Average Strokes Gained: Around the Green` = "SG.ARG",
-  `Average Strokes Gained: Putting` = "Average.SG.Putts"
+  "Number of Top 10 Finishes" = "Top.10",
+  "Winnings (millions of $)" = "Money",
+  "Final Official World Golf Ranking" = "Final.OWGR",
+  "Average Official World Golf Ranking" = "Average.OWGR",
+  "FedEx Cup Points" = "Points",
+  "Average Driving Distance (yards)" = "Average.Driving.Distance",
+  "Percentage of Fairways Hit" = "Fairway.Percentage",
+  "Percentage of Greens in Regulation Hit" = "GIR",
+  "Average Number of Putts" = "Average.Putts",
+  "Average Scrambling Percentage" = "Average.Scrambling",
+  "Average Score" = "Average.Score",
+  "Average Strokes Gained: Total" = "Average.SG.Total",
+  "Average Strokes Gained: Off the Tee" = "SG.OTT",
+  "Average Strokes Gained: Approach" = "SG.APR",
+  "Average Strokes Gained: Around the Green" = "SG.ARG",
+  "Average Strokes Gained: Putting" = "Average.SG.Putts"
 )
 masters <- read_csv("data/CT_Masters_playerscores_1934-2020.csv")
 
@@ -33,7 +33,7 @@ shinyUI(
     "PGA Tour Data Visualization Project",
     theme = shinytheme("simplex"),
     
-    tabPanel("About", headerPanel("Add info about project later")),
+    tabPanel("About", headerPanel(includeMarkdown("about.md"))),
     
     tabPanel("Season Statistics",
       pageWithSidebar(
@@ -51,29 +51,13 @@ shinyUI(
       )
     ),
     
-    # tabPanel("Masters", 
-    #          # titlePanel("Yearly Tournament Leaderboard"), 
-    #          pageWithSidebar(
-    #            headerPanel(""),
-    #            sidebarPanel(
-    #              selectInput(inputId = 'lb_yearly_year',
-    #                          label = "Select Year for Tournament Leaderboard:",
-    #                          choices = sort(unique(masters$Year), decreasing = T), 
-    #                          selected = 2020),
-    #              DTOutput("table"),
-    #              width = 6),
-    #            mainPanel()
-    #            )),
-    
-    tabPanel("Masters", 
+    tabPanel("The Masters", 
              fluidRow(
                column(6, wellPanel(fluidRow(column(12, h3("Yearly Tournament Leaderboard")),
-                                                   column(4, selectInput(inputId = 'tourney_year',
-                                                                         label = NULL,
-                                                                         choices = sort(unique(masters$Year), decreasing = T), 
-                                                                         selected = 2020)
-                                                          )
-                                                   ),
+                                            column(4, selectInput(inputId = 'tourney_year',
+                                                                  label = NULL,
+                                                                  choices = sort(unique(masters$Year), decreasing = T), 
+                                                                  selected = 2020))),
                                           DTOutput("table"))), 
              column(6, wellPanel(fluidRow(column(12, h3("Player Career Statistics")),
                                           #column(4, p("Select a player:"), align = 'right'),
@@ -89,10 +73,8 @@ shinyUI(
                                           valueBoxOutput(width = 3, "runnerup"),
                                           valueBoxOutput(width = 3, "top10"),
                                           valueBoxOutput(width = 3, "top25")),
-                                 DTOutput("table2")
-                                 )
-                    )
+                                 DTOutput("table2")))
              )
-)
-)
+    )
+  )
 )
