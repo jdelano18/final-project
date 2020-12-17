@@ -17,4 +17,22 @@ The data in this section initially come from www.masters.com/. Special thanks to
 This section of the project is designed to work with DataTables in shiny, as I had not used them in a project this semester yet. On the left panel, you can check out the leaderboard for any masters tournament by selecting the year. Note that by default, the chart includes only the players that made the 36-hole cut line. On the right panel, you can check out your favorite player's career statistics by typing or selecting their name in the search bar. You will see some summary statistics that provide an overview of their career at the Masters as well as a sortable table with each of their tournament results.
 
 ## Some Cool Results
+
 I've highlighted a few results that I found to be interesting after playing around with the app. These are meant to demonstrate the features of the app and inspire further exploration.
+
+### Drive for show or putt for dough?
+
+This old golf saying refers to the idea that one who can drive the ball really far and not putt as well relatively will not perform as well as those who have really good putting skills compared to their driving distance. At this point, it's common knowledge among modern golfers to know that this old saying has been proven false. We can see this difference visually between the two plots below. Notice how there is a clear negative association between average driving distance and average scores, whereas there is no clear relationship between average number of putts and average score. Clearly, these plots suggest that driving the ball further is actually an advantage. Maybe the saying should now be putt for show, drive for dough!
+
+![plot](Distance2018.png)
+![plot2](putts2018.png)
+
+### Masters Career of Jack Nicklaus
+
+Jack Nicklaus is undoubtably one of the best golfers of all time, and he's had great success on golf's greatest stage. Jack's 22 top 10s, 29 top 25s, and 6 green jackets are all masters records. In addition, his low round of 64 is one off the course record and he's tied for the most all time runner-ups (4) with Ben Hogan and Tom Weiskopf. Check out your favorite player by entering in their name!
+
+![jack](jackN.png)
+
+
+ 
+
