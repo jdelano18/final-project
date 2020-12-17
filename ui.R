@@ -43,8 +43,8 @@ shinyUI(
           selectInput("year", label = "Select a year:", choices = seq(2018,2010), selected = 2018),
           selectInput("xcol", label = "Select a variable for the x-axis:", choices = varChoices, selected = "Average.Score"),
           selectInput("ycol", label = "Select a variable for the y-axis:", choices = varChoices, selected = "Money"),
-          helpText("Filter golfers based on their final Official World Golf Ranking (OWGR) for the selected season."),
-          sliderInput("selectRank", label = "Final Official World Golf Ranking", min = 0, max = 300, value = c(0, 300))
+          #p("Use the slider to filter golfers based on their final Official World Golf Ranking (OWGR) for the selected season."),
+          sliderInput("selectRank", label = "Use the slider to filter golfers based on their final Official World Golf Ranking (OWGR) for the selected season.", min = 0, max = 300, value = c(0, 300))
         ),
         
         mainPanel(plotlyOutput("plot1"))

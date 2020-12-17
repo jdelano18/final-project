@@ -73,7 +73,8 @@ shinyServer(function(input, output) {
                              # arrange(desc(Rds_Complete), Finish, Total.Score, Last_Name) %>% 
                              arrange(Finish, Last_Name) %>%
                              select(Finish, Player_FullName, R1, R2, R3, R4, Total_Score, Finish_Par) %>%
-                             rename("Pos" = "Finish", "Player" = "Player_FullName", "Score" = "Total_Score", "Par" = "Finish_Par"),
+                             rename("Pos" = "Finish", "Player" = "Player_FullName", "Score" = "Total_Score", "Par" = "Finish_Par") %>% 
+                             rename("Round 1" = "R1", "Round 2" = "R2", "Round 3" = "R3", "Round 4" = "R4"),
                            options = list(info = F,
                                           paging = F,
                                           scrollY='500px',
@@ -84,7 +85,8 @@ shinyServer(function(input, output) {
   plyr_trns <- reactive({masters %>% 
       filter(Player_FullName == input$player) %>%
       select(Year, R1, R2, R3, R4, Total_Score, Finish_Par, Finish_Group_6, Rds_Complete, Finish) %>%
-      rename("Score" = "Total_Score", "Par" = "Finish_Par", "Group" = "Finish_Group_6")
+      rename("Score" = "Total_Score", "Par" = "Finish_Par", "Group" = "Finish_Group_6") %>% 
+      rename("Round 1" = "R1", "Round 2" = "R2", "Round 3" = "R3", "Round 4" = "R4")
     })
   
   output$table2 <- renderDT(plyr_trns() %>% 
