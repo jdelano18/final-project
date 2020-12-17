@@ -26,8 +26,8 @@ This old golf saying refers to the idea that one who can drive the ball really f
 
 Notice how there is a clear negative association between average driving distance and average scores, whereas there is no clear relationship between average number of putts and average score. Also we can see how the color of the dots -- which correspond to the world ranking -- follow the same pattern. Both plots show that lower average scores are associated with higher world rankings (which makes sense intuitively). However, driving distance also appears to be correlated with OWGR as the dark blue points are mostly in the lower right and the light blue points are mostly in the top left. 
 
-![plot](Distance2018.png)
-![plot2](putts2018.png)
+![plot](images/Distance2018.png)
+![plot2](images/putts2018.png)
 
 Clearly, these plots suggest that driving the ball further is actually an advantage. Play around with the "Season Statistics" tab to see how driving distance and putting correlated with tournament winnings or FedEx Cup points (hint: we see a similar result!). Maybe the saying should now be putt for show, drive for dough!
 
@@ -35,7 +35,7 @@ Clearly, these plots suggest that driving the ball further is actually an advant
 
 Jack Nicklaus is undoubtably one of the best golfers of all time, and he's had great success on golf's greatest stage. Jack's 22 top 10s, 29 top 25s, and 6 green jackets are all masters records. In addition, his low round of 64 is one off the course record and he's tied for the most all time runner-ups (4) with Ben Hogan and Tom Weiskopf. 
 
-![jack](jackN.png)
+![jack](images/jackN.png)
 
 Check out your favorite player by entering in their name in the Masters tab!
  
