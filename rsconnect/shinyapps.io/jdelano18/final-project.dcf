@@ -5,8 +5,9 @@ account: jdelano18
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3401303
-bundleId: 4003388
+bundleId: 4003419
 url: https://jdelano18.shinyapps.io/final-project/
-when: 1608245099.77452
+when: 1608245587.12871
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: loadData.R
